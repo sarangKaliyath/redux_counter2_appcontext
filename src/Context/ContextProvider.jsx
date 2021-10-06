@@ -4,11 +4,11 @@ export const AppContext = React.createContext();
 export const AppContextProvider = ({ children, store }) => {
     const { dispatch, getState } = store;
     const value = { dispatch, getState };
-    const [state, setState] = React.useState(0);
+    // const [state, setState] = React.useState(0);
 
-    const forceUpdate = () => setState(prev => prev + 1);
+    // const forceUpdate = () => setState(prev => prev + 1);
 
-    store.subscribe(forceUpdate);
+    // store.subscribe(forceUpdate);
 
     
     return (
