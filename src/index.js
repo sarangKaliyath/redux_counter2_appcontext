@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { store } from "./Redux/store.js";
+import { AppContextProvider } from '../src/Context/ContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
+    <AppContextProvider store={store}>
     <App />
+    </AppContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
